@@ -11,7 +11,6 @@ function info() {
 
 function cleanup_dotnet() {
   local BUILD_DIR="$1"
-  local CACHE_DIR="$2"
 
   rm -rf ${BUILD_DIR}/.heroku/dotnet
 }

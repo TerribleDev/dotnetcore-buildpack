@@ -9,6 +9,13 @@ function info() {
   echo "> $*"
 }
 
+function dotnet_cleanup() {
+  local BUILD_DIR="$1"
+
+  rm /app/dotnet
+  rm -rf ${BUILD_DIR}/.heroku/dotnet
+}
+
 function indent() {
   c='s/^/       /'
   case $(uname) in
@@ -59,11 +66,4 @@ export_env_dir() {
       done
     fi
   fi
-}
-
-function dotnet_cleanup() {
-  local BUILD_DIR="$1"
-
-  rm /app/dotnet
-  rm -rf ${BUILD_DIR}/.heroku/dotnet
 }

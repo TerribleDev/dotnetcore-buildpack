@@ -9,7 +9,7 @@ function info() {
   echo "> $*"
 }
 
-function dotnet_cleanup() {
+function cleanup_dotnet() {
   local BUILD_DIR="$1"
 
   rm /app/dotnet

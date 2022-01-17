@@ -9,8 +9,10 @@ function info() {
   echo "> $*"
 }
 
-function cleanup_dotnet() {
-  rm -rf /.heroku/dotnet
+function dotnet_cleanup() {
+  local BUILD_DIR="$1"
+
+  ls ${BUILD_DIR}/.heroku/dotnet
 }
 
 function indent() {

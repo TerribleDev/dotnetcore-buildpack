@@ -12,7 +12,7 @@ function info() {
 function dotnet_cleanup() {
   local BUILD_DIR="$1"
 
-  ls ${BUILD_DIR}/.heroku/dotnet
+  rm -r ${BUILD_DIR}/.heroku/dotnet/runtime
 }
 
 function indent() {
